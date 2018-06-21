@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0A11CC3-8B1E-4345-A5FA-01FC60E581D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Entitas</RootNamespace>
+    <AssemblyName>Entitas</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\Entitas\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\EntityStringExtension.cs" />
+    <Compile Include="Extensions\MatcherStringExtension.cs" />
+    <Compile Include="Matcher\Matcher.cs" />
+    <Compile Include="Matcher\MatcherToString.cs" />
+    <Compile Include="Matcher\MatcherEquals.cs" />
+    <Compile Include="Matcher\MatcherStatic.cs" />
+    <Compile Include="EntityIndex\EntityIndex.cs" />
+    <Compile Include="EntityIndex\AbstractEntityIndex.cs" />
+    <Compile Include="EntityIndex\PrimaryEntityIndex.cs" />
+    <Compile Include="Entity\Entity.cs" />
+    <Compile Include="Group\Group.cs" />
+    <Compile Include="Context\Context.cs" />
+    <Compile Include="Systems\JobSystem.cs" />
+    <Compile Include="Systems\Systems.cs" />
+    <Compile Include="Systems\ReactiveSystem.cs" />
+    <Compile Include="Group\GroupEvent.cs" />
+    <Compile Include="Context\ContextExtension.cs" />
+    <Compile Include="Group\GroupExtension.cs" />
+    <Compile Include="Context\Exceptions\ContextDoesNotContainEntityException.cs" />
+    <Compile Include="Context\Exceptions\ContextEntityIndexDoesAlreadyExistException.cs" />
+    <Compile Include="Context\Exceptions\ContextEntityIndexDoesNotExistException.cs" />
+    <Compile Include="Context\Exceptions\ContextStillHasRetainedEntitiesException.cs" />
+    <Compile Include="Context\Exceptions\EntityIsNotDestroyedException.cs" />
+    <Compile Include="Context\Exceptions\ContextInfoException.cs" />
+    <Compile Include="Entity\EntityEqualityComparer.cs" />
+    <Compile Include="Entity\Exceptions\EntityAlreadyHasComponentException.cs" />
+    <Compile Include="Entity\Exceptions\EntityDoesNotHaveComponentException.cs" />
+    <Compile Include="Entity\Exceptions\EntityIsAlreadyRetainedByOwnerException.cs" />
+    <Compile Include="Entity\Exceptions\EntityIsNotEnabledException.cs" />
+    <Compile Include="Entity\Exceptions\EntityIsNotRetainedByOwnerException.cs" />
+    <Compile Include="Group\GroupSingleEntityException.cs" />
+    <Compile Include="EntityIndex\EntityIndexException.cs" />
+    <Compile Include="Matcher\MatcherException.cs" />
+    <Compile Include="Collector\Collector.cs" />
+    <Compile Include="Collector\CollectorException.cs" />
+    <Compile Include="EntitasCache.cs" />
+    <Compile Include="EntitasResources.cs" />
+    <Compile Include="Extensions\CollectionExtension.cs" />
+    <Compile Include="Extensions\ComponentStringExtension.cs" />
+    <Compile Include="Extensions\ContextStringExtension.cs" />
+    <Compile Include="Extensions\PublicMemberInfoEntityExtension.cs" />
+    <Compile Include="Extensions\SystemStringExtension.cs" />
+    <Compile Include="Entity\UnsafeAERC.cs" />
+    <Compile Include="Entity\SafeAERC.cs" />
+    <Compile Include="ContextInfo.cs" />
+    <Compile Include="EntitasException.cs" />
+    <Compile Include="Context\IContext.cs" />
+    <Compile Include="Entity\IAERC.cs" />
+    <Compile Include="IComponent.cs" />
+    <Compile Include="Context\IContexts.cs" />
+    <Compile Include="Entity\IEntity.cs" />
+    <Compile Include="EntityIndex\IEntityIndex.cs" />
+    <Compile Include="Group\IGroup.cs" />
+    <Compile Include="Systems\Interfaces\ICleanupSystem.cs" />
+    <Compile Include="Systems\Interfaces\IExecuteSystem.cs" />
+    <Compile Include="Systems\Interfaces\IInitializeSystem.cs" />
+    <Compile Include="Systems\Interfaces\IReactiveSystem.cs" />
+    <Compile Include="Systems\Interfaces\ISystem.cs" />
+    <Compile Include="Systems\Interfaces\ITearDownSystem.cs" />
+    <Compile Include="Matcher\Interfaces\IAllOfMatcher.cs" />
+    <Compile Include="Matcher\Interfaces\IAnyOfMatcher.cs" />
+    <Compile Include="Matcher\Interfaces\ICompoundMatcher.cs" />
+    <Compile Include="Matcher\Interfaces\IMatcher.cs" />
+    <Compile Include="Matcher\Interfaces\INoneOfMatcher.cs" />
+    <Compile Include="Collector\TriggerOnEvent.cs" />
+    <Compile Include="Collector\CollectorContextExtension.cs" />
+    <Compile Include="Collector\TriggerOnEventMatcherExtension.cs" />
+    <Compile Include="Collector\ICollector.cs" />
+    <Compile Include="Systems\MultiReactiveSystem.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="version.txt">
+      <LogicalName>version.txt</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DesperateDev.Logging\DesperateDevs.Logging.csproj">
+      <Project>{8afdb3e3-9276-49b3-8c22-f952253fff59}</Project>
+      <Name>DesperateDevs.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DesperateDevs.Utils\DesperateDevs.Utils.csproj">
+      <Project>{f8d065f3-8dee-44f3-8a18-c847c591f199}</Project>
+      <Name>DesperateDevs.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

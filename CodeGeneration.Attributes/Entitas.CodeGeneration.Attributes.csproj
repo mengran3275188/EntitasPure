@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{411534F0-D5E2-44B8-8B9A-F1A1A7259667}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Entitas.CodeGeneration.Attributes</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="AbstractEntityIndexAttribute.cs" />
+    <Compile Include="ContextAttribute.cs" />
+    <Compile Include="CustomComponentNameAttribute.cs" />
+    <Compile Include="CustomEntityIndexAttribute.cs" />
+    <Compile Include="CustomPrefixAttribute.cs" />
+    <Compile Include="DontGenerateAttribute.cs" />
+    <Compile Include="EntityIndexAttribute.cs" />
+    <Compile Include="EntityIndexGetMethodAttribute.cs" />
+    <Compile Include="EntityIndexType.cs" />
+    <Compile Include="PostConstructorAttribute.cs" />
+    <Compile Include="PrimaryEntityIndexAttribute.cs" />
+    <Compile Include="UniqueAttribute.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

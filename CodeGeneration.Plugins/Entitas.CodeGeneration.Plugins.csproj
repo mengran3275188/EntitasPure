@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{E6EA4EE1-E81C-4991-9796-8347D42953A1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Entitas.CodeGeneration.Plugins</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\Bin\Entitas.CodeGenerator.CLI\Plugins\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Core\3.5.0.0__b77a5c561934e089\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddFileHeaderPostProcessor.cs" />
+    <Compile Include="AssembliesConfig.cs" />
+    <Compile Include="CleanTargetDirectoryPostProcessor.cs" />
+    <Compile Include="ComponentContextGenerator.cs" />
+    <Compile Include="ComponentData.cs" />
+    <Compile Include="ComponentDataExtension.cs" />
+    <Compile Include="ComponentDataProvider.cs" />
+    <Compile Include="ComponentEntityGenerator.cs" />
+    <Compile Include="ComponentEntityInterfaceGenerator.cs" />
+    <Compile Include="ComponentGenerator.cs" />
+    <Compile Include="ComponentMatcherGenerator.cs" />
+    <Compile Include="ComponentsLookupGenerator.cs" />
+    <Compile Include="ComponentTypeComponentDataExtension.cs" />
+    <Compile Include="ComponentTypeComponentDataProvider.cs" />
+    <Compile Include="ConsoleWriteLinePostProcessor.cs" />
+    <Compile Include="ContextAttributeGenerator.cs" />
+    <Compile Include="ContextData.cs" />
+    <Compile Include="ContextDataExtension.cs" />
+    <Compile Include="ContextDataProvider.cs" />
+    <Compile Include="ContextGenerator.cs" />
+    <Compile Include="ContextMatcherGenerator.cs" />
+    <Compile Include="ContextNamesConfig.cs" />
+    <Compile Include="ContextsComponentDataExtension.cs" />
+    <Compile Include="ContextsComponentDataProvider.cs" />
+    <Compile Include="ContextsGenerator.cs" />
+    <Compile Include="EntityGenerator.cs" />
+    <Compile Include="EntityIndexData.cs" />
+    <Compile Include="EntityIndexDataExtension.cs" />
+    <Compile Include="EntityIndexDataProvider.cs" />
+    <Compile Include="EntityIndexGenerator.cs" />
+    <Compile Include="IComponentDataProvider.cs" />
+    <Compile Include="IgnoreNamespacesConfig.cs" />
+    <Compile Include="IsUniqueComponentDataExtension.cs" />
+    <Compile Include="IsUniqueComponentDataProvider.cs" />
+    <Compile Include="MemberData.cs" />
+    <Compile Include="MemberDataComponentDataProvider.cs" />
+    <Compile Include="MemberInfosComponentDataExtension.cs" />
+    <Compile Include="MergeFilesPostProcessor.cs" />
+    <Compile Include="MethodData.cs" />
+    <Compile Include="NewLinePostProcessor.cs" />
+    <Compile Include="PluginUtil.cs" />
+    <Compile Include="ProjectPathConfig.cs" />
+    <Compile Include="ShouldGenerateComponentComponentDataExtension.cs" />
+    <Compile Include="ShouldGenerateComponentComponentDataProvider.cs" />
+    <Compile Include="ShouldGenerateComponentIndexComponentDataExtension.cs" />
+    <Compile Include="ShouldGenerateComponentIndexComponentDataProvider.cs" />
+    <Compile Include="ShouldGenerateMethodsComponentDataExtension.cs" />
+    <Compile Include="ShouldGenerateMethodsComponentDataProvider.cs" />
+    <Compile Include="TargetDirectoryConfig.cs" />
+    <Compile Include="TargetDirectoryStringExtension.cs" />
+    <Compile Include="UniquePrefixComponentDataExtension.cs" />
+    <Compile Include="UniquePrefixComponentDataProvider.cs" />
+    <Compile Include="UpdateCSProjPostProcessor.cs" />
+    <Compile Include="WriteToDiskPostProcessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj">
+      <Project>{411534f0-d5e2-44b8-8b9a-f1a1a7259667}</Project>
+      <Name>Entitas.CodeGeneration.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeGeneration\Entitas.CodeGeneration.csproj">
+      <Project>{cde4e68f-8dcf-47b7-8748-98d4450cf72b}</Project>
+      <Name>Entitas.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeGenerator\Entitas.CodeGeneration.CodeGenerator.csproj">
+      <Project>{f5d94644-5f66-4c32-9f71-54d202a123ba}</Project>
+      <Name>Entitas.CodeGeneration.CodeGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DesperateDev.Logging\DesperateDevs.Logging.csproj">
+      <Project>{8afdb3e3-9276-49b3-8c22-f952253fff59}</Project>
+      <Name>DesperateDevs.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DesperateDevs.Utils\DesperateDevs.Utils.csproj">
+      <Project>{f8d065f3-8dee-44f3-8a18-c847c591f199}</Project>
+      <Name>DesperateDevs.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entitas\Entitas.csproj">
+      <Project>{a0a11cc3-8b1e-4345-a5fa-01fc60e581d8}</Project>
+      <Name>Entitas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
