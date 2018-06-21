@@ -86,24 +86,32 @@ namespace Entitas.CodeGeneration.Plugins
 				.Replace("${Index}", newValue)
 				.Replace("${memberArgs}", this.getMemberArgs(memberData))
 				.Replace("${memberAssignment}", this.getMemberAssignment(memberData));
-			string[] obj = new string[7]
-			{
-				contextName,
-				null,
-				null,
-				null,
-				null,
-				null,
-				null
-			};
-			char directorySeparatorChar = Path.DirectorySeparatorChar;
-			obj[1] = directorySeparatorChar.ToString();
-			obj[2] = "Components";
-			directorySeparatorChar = Path.DirectorySeparatorChar;
-			obj[3] = directorySeparatorChar.ToString();
-			obj[4] = contextName;
-			obj[5] = text.AddComponentSuffix();
-			obj[6] = ".cs";
+			//string[] obj = new string[7]
+			//{
+			//	contextName,
+			//	null,
+			//	null,
+			//	null,
+			//	null,
+			//	null,
+			//	null
+			//};
+			//char directorySeparatorChar = Path.DirectorySeparatorChar;
+			//obj[1] = directorySeparatorChar.ToString();
+			//obj[2] = "Components";
+			//directorySeparatorChar = Path.DirectorySeparatorChar;
+			//obj[3] = directorySeparatorChar.ToString();
+			//obj[4] = contextName;
+			//obj[5] = text.AddComponentSuffix();
+			//obj[6] = ".cs";
+            char directorySeparatorChar = Path.DirectorySeparatorChar;
+            string[] obj = new string[4]
+            {
+                contextName,
+                directorySeparatorChar.ToString(),
+                contextName,
+                "Components.cs",
+            };
 			return new CodeGenFile(string.Concat(obj), fileContent, base.GetType().FullName);
 		}
 

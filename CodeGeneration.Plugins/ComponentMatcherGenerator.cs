@@ -76,24 +76,32 @@ namespace Entitas.CodeGeneration.Plugins
 			string newValue2 = contextName + "ComponentsLookup.componentNames";
 			string fileContent = "public sealed partial class ${ContextName}Matcher {\n\n    static Entitas.IMatcher<${ContextName}Entity> _matcher${ComponentName};\n\n    public static Entitas.IMatcher<${ContextName}Entity> ${ComponentName} {\n        get {\n            if (_matcher${ComponentName} == null) {\n                var matcher = (Entitas.Matcher<${ContextName}Entity>)Entitas.Matcher<${ContextName}Entity>.AllOf(${Index});\n                matcher.componentNames = ${ComponentNames};\n                _matcher${ComponentName} = matcher;\n            }\n\n            return _matcher${ComponentName};\n        }\n    }\n}\n".Replace("${ContextName}", contextName).Replace("${ComponentName}", text).Replace("${Index}", newValue)
 				.Replace("${ComponentNames}", newValue2);
-			string[] obj = new string[7]
-			{
-				contextName,
-				null,
-				null,
-				null,
-				null,
-				null,
-				null
-			};
-			char directorySeparatorChar = Path.DirectorySeparatorChar;
-			obj[1] = directorySeparatorChar.ToString();
-			obj[2] = "Components";
-			directorySeparatorChar = Path.DirectorySeparatorChar;
-			obj[3] = directorySeparatorChar.ToString();
-			obj[4] = contextName;
-			obj[5] = text.AddComponentSuffix();
-			obj[6] = ".cs";
+			//string[] obj = new string[7]
+			//{
+			//	contextName,
+			//	null,
+			//	null,
+			//	null,
+			//	null,
+			//	null,
+			//	null
+			//};
+			//char directorySeparatorChar = Path.DirectorySeparatorChar;
+			//obj[1] = directorySeparatorChar.ToString();
+			//obj[2] = "Components";
+			//directorySeparatorChar = Path.DirectorySeparatorChar;
+			//obj[3] = directorySeparatorChar.ToString();
+			//obj[4] = contextName;
+			//obj[5] = text.AddComponentSuffix();
+			//obj[6] = ".cs";
+            char directorySeparatorChar = Path.DirectorySeparatorChar;
+            string[] obj = new string[4]
+            {
+                contextName,
+                directorySeparatorChar.ToString(),
+                contextName,
+                "Components.cs",
+            };
 			return new CodeGenFile(string.Concat(obj), fileContent, base.GetType().FullName);
 		}
 	}
