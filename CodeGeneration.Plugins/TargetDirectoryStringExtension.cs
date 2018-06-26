@@ -12,13 +12,13 @@ namespace Entitas.CodeGeneration.Plugins
 				{
 					directory = directory.Substring(0, directory.Length - 1);
 				}
-				if (!directory.EndsWith("/Generated", StringComparison.Ordinal))
+				if (!directory.EndsWith("/EntitasGenerated", StringComparison.Ordinal))
 				{
-					directory += "/Generated";
+					directory += "/EntitasGenerated";
 				}
 				return directory;
 			}
-			return "Generated";
+			return "EntitasGenerated";
 		}
 	}
 }
