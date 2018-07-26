@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace Entitas.CodeGeneration.CodeGenerator.CLI
 {
+    /*
 	public class FixConfig : AbstractCommand
 	{
 		public override string trigger
@@ -126,4 +127,5 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 			}
 		}
 	}
+    */
 }

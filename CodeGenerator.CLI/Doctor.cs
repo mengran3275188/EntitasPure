@@ -2,6 +2,7 @@ using DesperateDevs.Logging;
 
 namespace Entitas.CodeGeneration.CodeGenerator.CLI
 {
+    /*
 	public class Doctor : AbstractCommand
 	{
 		public override string trigger
@@ -19,8 +20,9 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 			{
 				new Status().Run(args);
 				fabl.Debug("Dry Run");
-				CodeGeneratorUtil.CodeGeneratorFromProperties().DryRun();
+				//CodeGeneratorUtil.CodeGeneratorFromProperties().DryRun();
 			}
 		}
 	}
+    */
 }

@@ -27,18 +27,35 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AbstractConfigurableConfig.cs" />
+    <Compile Include="CodeGeneratorConfig.cs" />
     <Compile Include="CodeGeneratorData.cs" />
     <Compile Include="CodeGenFile.cs" />
+    <Compile Include="ConfigurableConfigExtension.cs" />
+    <Compile Include="Diagnosis.cs" />
+    <Compile Include="ICachable.cs" />
     <Compile Include="ICodeGenerator.cs" />
-    <Compile Include="ICodeGeneratorDataProvider.cs" />
-    <Compile Include="ICodeGeneratorInterface.cs" />
-    <Compile Include="ICodeGenFilePostProcessor.cs" />
+    <Compile Include="IDataProvider.cs" />
+    <Compile Include="ICodeGenerationPlugin.cs" />
+    <Compile Include="IConfigurable.cs" />
+    <Compile Include="IDoctor.cs" />
+    <Compile Include="IPostProcessor.cs" />
+    <Compile Include="IPreProcessor.cs" />
+    <Compile Include="Preferences.cs" />
+    <Compile Include="Properties.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DesperateDev.Logging\DesperateDevs.Logging.csproj">
+      <Project>{8afdb3e3-9276-49b3-8c22-f952253fff59}</Project>
+      <Name>DesperateDevs.Logging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesperateDevs.Utils\DesperateDevs.Utils.csproj">
       <Project>{f8d065f3-8dee-44f3-8a18-c847c591f199}</Project>
       <Name>DesperateDevs.Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

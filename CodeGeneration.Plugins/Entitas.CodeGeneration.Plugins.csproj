@@ -29,6 +29,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>..\Bin\Entitas.CodeGenerator.CLI\Plugins\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <OutputPath>..\Bin\Entitas.CodeGenerator.CLI\Plugins\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Core">
       <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Core\3.5.0.0__b77a5c561934e089\System.Core.dll</HintPath>
@@ -38,60 +41,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddFileHeaderPostProcessor.cs" />
-    <Compile Include="AssembliesConfig.cs" />
-    <Compile Include="CleanTargetDirectoryPostProcessor.cs" />
-    <Compile Include="ComponentContextGenerator.cs" />
-    <Compile Include="ComponentData.cs" />
-    <Compile Include="ComponentDataExtension.cs" />
-    <Compile Include="ComponentDataProvider.cs" />
-    <Compile Include="ComponentEntityGenerator.cs" />
-    <Compile Include="ComponentEntityInterfaceGenerator.cs" />
-    <Compile Include="ComponentGenerator.cs" />
-    <Compile Include="ComponentMatcherGenerator.cs" />
-    <Compile Include="ComponentsLookupGenerator.cs" />
-    <Compile Include="ComponentTypeComponentDataExtension.cs" />
-    <Compile Include="ComponentTypeComponentDataProvider.cs" />
-    <Compile Include="ConsoleWriteLinePostProcessor.cs" />
-    <Compile Include="ContextAttributeGenerator.cs" />
-    <Compile Include="ContextData.cs" />
-    <Compile Include="ContextDataExtension.cs" />
-    <Compile Include="ContextDataProvider.cs" />
-    <Compile Include="ContextGenerator.cs" />
-    <Compile Include="ContextMatcherGenerator.cs" />
-    <Compile Include="ContextNamesConfig.cs" />
-    <Compile Include="ContextsComponentDataExtension.cs" />
-    <Compile Include="ContextsComponentDataProvider.cs" />
-    <Compile Include="ContextsGenerator.cs" />
-    <Compile Include="EntityGenerator.cs" />
-    <Compile Include="EntityIndexData.cs" />
-    <Compile Include="EntityIndexDataExtension.cs" />
-    <Compile Include="EntityIndexDataProvider.cs" />
-    <Compile Include="EntityIndexGenerator.cs" />
-    <Compile Include="IComponentDataProvider.cs" />
-    <Compile Include="IgnoreNamespacesConfig.cs" />
-    <Compile Include="IsUniqueComponentDataExtension.cs" />
-    <Compile Include="IsUniqueComponentDataProvider.cs" />
-    <Compile Include="MemberData.cs" />
-    <Compile Include="MemberDataComponentDataProvider.cs" />
-    <Compile Include="MemberInfosComponentDataExtension.cs" />
-    <Compile Include="MergeFilesPostProcessor.cs" />
-    <Compile Include="MethodData.cs" />
-    <Compile Include="NewLinePostProcessor.cs" />
+    <Compile Include="AbstractGenerator.cs" />
+    <Compile Include="CodeGeneratorExtentions.cs" />
+    <Compile Include="Component\CodeGenerators\ComponentContextApiGenerator.cs" />
+    <Compile Include="Component\CodeGenerators\ComponentEntityApiGenerator.cs" />
+    <Compile Include="Component\CodeGenerators\ComponentEntityApiInterfaceGenerator.cs" />
+    <Compile Include="Component\CodeGenerators\ComponentGenerator.cs" />
+    <Compile Include="Component\CodeGenerators\ComponentLookupGenerator.cs" />
+    <Compile Include="Component\CodeGenerators\ComponentMatcherApiGenerator.cs" />
+    <Compile Include="Component\ComponentData.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\ComponentTypeComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\ContextsComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\EventComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\FlagPrefixComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\IComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\IsUniqueComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\MemberDataComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\ShouldGenerateComponentComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\ShouldGenerateComponentIndexComponentDataProvider.cs" />
+    <Compile Include="Component\DataProviders\ComponentDataProviders\ShouldGenerateMethodsComponentDataProvider.cs" />
+    <Compile Include="Configs\AssembliesConfig.cs" />
+    <Compile Include="Configs\ContextNamesConfig.cs" />
+    <Compile Include="Configs\IgnoreNamespacesConfig.cs" />
+    <Compile Include="Configs\TemplateConfigExtension.cs" />
+    <Compile Include="Configs\TemplatesConfig.cs" />
+    <Compile Include="Context\CodeGenerators\ContextAttributeGenerator.cs" />
+    <Compile Include="Context\CodeGenerators\ContextGenerator.cs" />
+    <Compile Include="Context\CodeGenerators\ContextMatcherGenerator.cs" />
+    <Compile Include="Context\CodeGenerators\ContextsGenerator.cs" />
+    <Compile Include="Context\ContextData.cs" />
+    <Compile Include="Context\DataProviders\ContextDataProvider.cs" />
+    <Compile Include="Data\MemberData.cs" />
+    <Compile Include="Data\MethodData.cs" />
+    <Compile Include="EntitasHook.cs" />
+    <Compile Include="EntityIndex\CodeGenerators\EntityIndexGenerator.cs" />
+    <Compile Include="EntityIndex\DataProviders\EntityIndexDataProvider.cs" />
+    <Compile Include="EntityIndex\EntityIndexData.cs" />
+    <Compile Include="Entity\CodeGenerators\EntityGenerator.cs" />
+    <Compile Include="Events\CodeGenerators\EventEntityApiGenerator.cs" />
+    <Compile Include="Events\CodeGenerators\EventListenerComponentGenerator.cs" />
+    <Compile Include="Events\CodeGenerators\EventListenertInterfaceGenerator.cs" />
+    <Compile Include="Events\CodeGenerators\EventSystemGenerator.cs" />
+    <Compile Include="Events\CodeGenerators\EventSystemsGenerator.cs" />
+    <Compile Include="Events\EventData.cs" />
     <Compile Include="PluginUtil.cs" />
-    <Compile Include="ProjectPathConfig.cs" />
-    <Compile Include="ShouldGenerateComponentComponentDataExtension.cs" />
-    <Compile Include="ShouldGenerateComponentComponentDataProvider.cs" />
-    <Compile Include="ShouldGenerateComponentIndexComponentDataExtension.cs" />
-    <Compile Include="ShouldGenerateComponentIndexComponentDataProvider.cs" />
-    <Compile Include="ShouldGenerateMethodsComponentDataExtension.cs" />
-    <Compile Include="ShouldGenerateMethodsComponentDataProvider.cs" />
-    <Compile Include="TargetDirectoryConfig.cs" />
-    <Compile Include="TargetDirectoryStringExtension.cs" />
-    <Compile Include="UniquePrefixComponentDataExtension.cs" />
-    <Compile Include="UniquePrefixComponentDataProvider.cs" />
-    <Compile Include="UpdateCSProjPostProcessor.cs" />
-    <Compile Include="WriteToDiskPostProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj">

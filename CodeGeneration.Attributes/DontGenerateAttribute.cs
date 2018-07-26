@@ -1,15 +1,14 @@
 using System;
 
-namespace Entitas.CodeGeneration.Attributes
-{
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface)]
-	public class DontGenerateAttribute : Attribute
-	{
-		public readonly bool generateIndex;
+namespace Entitas.CodeGeneration.Attributes {
 
-		public DontGenerateAttribute(bool generateIndex = true)
-		{
-			this.generateIndex = generateIndex;
-		}
-	}
+    [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum)]
+    public class DontGenerateAttribute : Attribute {
+
+        public readonly bool generateIndex;
+
+        public DontGenerateAttribute(bool generateIndex = true) {
+            this.generateIndex = generateIndex;
+        }
+    }
 }

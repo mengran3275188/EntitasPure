@@ -3,3 +3,5 @@
 obj/
 [Bb]in
 .vs/
+.csproj.user
+

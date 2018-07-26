@@ -39,7 +39,7 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 			if (Helper.GetUserDecision('y', 'n'))
 			{
 				properties[key] = value;
-				Preferences.SaveProperties(properties);
+				Preferences.sharedInstance.Save();
 				fabl.Info("Added: " + key);
 			}
 		}
@@ -50,7 +50,7 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 			if (Helper.GetUserDecision('y', 'n'))
 			{
 				properties.RemoveProperty(key);
-				Preferences.SaveProperties(properties);
+				Preferences.sharedInstance.Save();
 				fabl.Warn("Removed: " + key);
 			}
 		}
@@ -63,7 +63,7 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 				List<string> list = values.ToList();
 				list.Remove(value);
 				updateAction(list.ToArray());
-				Preferences.SaveProperties(properties);
+				Preferences.sharedInstance.Save();
 				fabl.Warn("Removed: " + value);
 			}
 		}
@@ -75,8 +75,8 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 			{
 				List<string> list = values.ToList();
 				list.Add(value);
-				updateAction(CodeGeneratorUtil.GetOrderedNames(list.ToArray()));
-				Preferences.SaveProperties(properties);
+				//updateAction(CodeGeneratorUtil.GetOrderedNames(list.ToArray()));
+				Preferences.sharedInstance.Save();
 				fabl.Info("Added: " + value);
 			}
 		}

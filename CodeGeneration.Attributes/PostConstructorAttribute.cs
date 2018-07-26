@@ -1,9 +1,8 @@
-using System;
+﻿using System;
 
-namespace Entitas.CodeGeneration.Attributes
-{
-	[AttributeUsage(AttributeTargets.Method)]
-	public class PostConstructorAttribute : Attribute
-	{
-	}
+namespace Entitas.CodeGeneration.Attributes {
+
+    [AttributeUsage(AttributeTargets.Method)]
+    public class PostConstructorAttribute : Attribute {
+    }
 }

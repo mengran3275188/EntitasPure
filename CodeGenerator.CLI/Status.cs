@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace Entitas.CodeGeneration.CodeGenerator.CLI
 {
+    /*
 	public class Status : AbstractCommand
 	{
 		public override string trigger
@@ -75,9 +76,9 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 			string[] unavailable = CodeGeneratorUtil.GetUnavailable<ICodeGeneratorDataProvider>(types, config.dataProviders);
 			string[] unavailable2 = CodeGeneratorUtil.GetUnavailable<ICodeGenerator>(types, config.codeGenerators);
 			string[] unavailable3 = CodeGeneratorUtil.GetUnavailable<ICodeGenFilePostProcessor>(types, config.postProcessors);
-			string[] available = CodeGeneratorUtil.GetAvailable<ICodeGeneratorDataProvider>(types, config.dataProviders);
+			string[] available = CodeGeneratorUtil.GetAvailable<IDataProvider>(types, config.dataProviders);
 			string[] available2 = CodeGeneratorUtil.GetAvailable<ICodeGenerator>(types, config.codeGenerators);
-			string[] available3 = CodeGeneratorUtil.GetAvailable<ICodeGenFilePostProcessor>(types, config.postProcessors);
+			string[] available3 = CodeGeneratorUtil.GetAvailable<IPostProcessor>(types, config.postProcessors);
 			Status.printUnavailable(unavailable);
 			Status.printUnavailable(unavailable2);
 			Status.printUnavailable(unavailable3);
@@ -102,4 +103,5 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 			}
 		}
 	}
+    */
 }

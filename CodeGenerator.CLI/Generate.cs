@@ -16,7 +16,7 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 		{
 			if (base.assertProperties())
 			{
-				CodeGenerator codeGenerator = CodeGeneratorUtil.CodeGeneratorFromProperties();
+				CodeGenerator codeGenerator = CodeGeneratorUtil.CodeGeneratorFromPreferences(Preferences.sharedInstance);
 				codeGenerator.OnProgress += delegate(string title, string info, float progress)
 				{
 					int num = (int)(progress * 100f);

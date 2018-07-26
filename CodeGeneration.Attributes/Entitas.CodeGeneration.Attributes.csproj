@@ -28,17 +28,20 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="AbstractEntityIndexAttribute.cs" />
+    <Compile Include="CleanupAttribute.cs" />
+    <Compile Include="EntityIndex\AbstractEntityIndexAttribute.cs" />
     <Compile Include="ContextAttribute.cs" />
     <Compile Include="CustomComponentNameAttribute.cs" />
     <Compile Include="CustomEntityIndexAttribute.cs" />
     <Compile Include="CustomPrefixAttribute.cs" />
     <Compile Include="DontGenerateAttribute.cs" />
-    <Compile Include="EntityIndexAttribute.cs" />
-    <Compile Include="EntityIndexGetMethodAttribute.cs" />
-    <Compile Include="EntityIndexType.cs" />
+    <Compile Include="EntityIndex\EntityIndexAttribute.cs" />
+    <Compile Include="EntityIndex\EntityIndexGetMethodAttribute.cs" />
+    <Compile Include="EntityIndex\EntityIndexType.cs" />
+    <Compile Include="EventAttribute.cs" />
+    <Compile Include="FlagPrefixAttribute.cs" />
     <Compile Include="PostConstructorAttribute.cs" />
-    <Compile Include="PrimaryEntityIndexAttribute.cs" />
+    <Compile Include="EntityIndex\PrimaryEntityIndexAttribute.cs" />
     <Compile Include="UniqueAttribute.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

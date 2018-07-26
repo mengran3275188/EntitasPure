@@ -27,6 +27,7 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System" />
     <Reference Include="System.Core">
       <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Core\3.5.0.0__b77a5c561934e089\System.Core.dll</HintPath>
     </Reference>
@@ -34,7 +35,6 @@
   <ItemGroup>
     <Compile Include="AssemblyResolver.cs" />
     <Compile Include="CodeGenerator.cs" />
-    <Compile Include="CodeGeneratorConfig.cs" />
     <Compile Include="CodeGeneratorUtil.cs" />
     <Compile Include="GeneratorProgress.cs" />
   </ItemGroup>

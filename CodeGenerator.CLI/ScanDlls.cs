@@ -18,7 +18,7 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 		{
 			if (base.assertProperties())
 			{
-				ScanDlls.printTypes(CodeGeneratorUtil.LoadTypesFromPlugins(base.loadProperties()));
+				//ScanDlls.printTypes(CodeGeneratorUtil.LoadFromPlugins(Preferences.sharedInstance));
 			}
 		}
 

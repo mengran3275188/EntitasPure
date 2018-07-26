@@ -33,6 +33,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\EntitasStringExtension.cs" />
     <Compile Include="Extensions\EntityStringExtension.cs" />
     <Compile Include="Extensions\MatcherStringExtension.cs" />
     <Compile Include="Matcher\Matcher.cs" />

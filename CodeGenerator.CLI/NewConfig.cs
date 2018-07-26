@@ -21,7 +21,7 @@ namespace Entitas.CodeGeneration.CodeGenerator.CLI
 			{
 				CodeGeneratorConfig codeGeneratorConfig = new CodeGeneratorConfig();
 				Properties properties = new Properties(codeGeneratorConfig.defaultProperties);
-				codeGeneratorConfig.Configure(properties);
+				//codeGeneratorConfig.Configure(properties);
 				string text2 = codeGeneratorConfig.ToString();
 				File.WriteAllText(text, text2);
 				fabl.Info("Created " + text);

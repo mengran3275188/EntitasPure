@@ -1,27 +1,24 @@
-using Entitas.CodeGeneration.CodeGenerator;
-using DesperateDevs.Utils;
-using System;
 using System.Collections.Generic;
+using DesperateDevs.Utils;
 
-namespace Entitas.CodeGeneration.Plugins
-{
-	public static class PluginUtil
-	{
-		private static Dictionary<string, AssemblyResolver> _resolvers = new Dictionary<string, AssemblyResolver>();
+namespace Entitas.CodeGeneration.Plugins {
 
-		public static AssemblyResolver GetAssembliesResolver(string[] assemblies, string[] basePaths)
-		{
-			string key = assemblies.ToCSV();
-			if (!PluginUtil._resolvers.ContainsKey(key))
-			{
-				AssemblyResolver assemblyResolver = new AssemblyResolver(false, basePaths);
-				foreach (string path in assemblies)
-				{
-					assemblyResolver.Load(path);
-				}
-				PluginUtil._resolvers.Add(key, assemblyResolver);
-			}
-			return PluginUtil._resolvers[key];
-		}
-	}
+    public static class PluginUtil {
+
+        public const string ASSEMBLY_RESOLVER_KEY = "Entitas.CodeGeneration.Plugins.AssemblyResolver";
+
+        public static AssemblyResolver GetCachedAssemblyResolver(Dictionary<string, object> objectCache, string[] assemblies, string[] basePaths) {
+            object cachedAssemblyResolver;
+            if (!objectCache.TryGetValue(ASSEMBLY_RESOLVER_KEY, out cachedAssemblyResolver)) {
+                cachedAssemblyResolver = new AssemblyResolver(false, basePaths);
+                var resolver = (AssemblyResolver)cachedAssemblyResolver;
+                foreach (var path in assemblies) {
+                    resolver.Load(path);
+                }
+                objectCache.Add(ASSEMBLY_RESOLVER_KEY, cachedAssemblyResolver);
+            }
+
+            return (AssemblyResolver)cachedAssemblyResolver;
+        }
+    }
 }
