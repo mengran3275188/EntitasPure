@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractGenerator.cs" />
+    <Compile Include="PostProcessor\AddFileHeaderPostProcessor.cs" />
+    <Compile Include="PostProcessor\CleanTargetDirectoryPostProcessor.cs" />
     <Compile Include="CodeGeneratorExtentions.cs" />
     <Compile Include="Component\CodeGenerators\ComponentContextApiGenerator.cs" />
     <Compile Include="Component\CodeGenerators\ComponentEntityApiGenerator.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="Configs\IgnoreNamespacesConfig.cs" />
     <Compile Include="Configs\TemplateConfigExtension.cs" />
     <Compile Include="Configs\TemplatesConfig.cs" />
+    <Compile Include="PostProcessor\ConsoleWriteLinePostProcessor.cs" />
     <Compile Include="Context\CodeGenerators\ContextAttributeGenerator.cs" />
     <Compile Include="Context\CodeGenerators\ContextGenerator.cs" />
     <Compile Include="Context\CodeGenerators\ContextMatcherGenerator.cs" />
@@ -85,7 +88,13 @@
     <Compile Include="Events\CodeGenerators\EventSystemGenerator.cs" />
     <Compile Include="Events\CodeGenerators\EventSystemsGenerator.cs" />
     <Compile Include="Events\EventData.cs" />
+    <Compile Include="PostProcessor\MergeFilesPostProcessor.cs" />
+    <Compile Include="PostProcessor\NewLinePostProcessor.cs" />
     <Compile Include="PluginUtil.cs" />
+    <Compile Include="Configs\TargetDirectoryConfig.cs" />
+    <Compile Include="ProjectPathConfig.cs" />
+    <Compile Include="TargetDirectoryStringExtension.cs" />
+    <Compile Include="PostProcessor\WriteToDiskPostProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj">
