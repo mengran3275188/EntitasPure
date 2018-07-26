@@ -1,0 +1,12 @@
+E:\Github\MyEntitas\CodeGeneration.Attributes\bin\Release\Entitas.CodeGeneration.Attributes.dll
+E:\Github\MyEntitas\CodeGeneration.Attributes\bin\Release\Entitas.CodeGeneration.Attributes.pdb
+E:\Github\MyEntitas\CodeGeneration.Attributes\obj\Release\Entitas.CodeGeneration.Attributes.csprojAssemblyReference.cache
+E:\Github\MyEntitas\CodeGeneration.Attributes\obj\Release\Entitas.CodeGeneration.Attributes.csproj.CoreCompileInputs.cache
+E:\Github\MyEntitas\CodeGeneration.Attributes\obj\Release\Entitas.CodeGeneration.Attributes.dll
+E:\Github\MyEntitas\CodeGeneration.Attributes\obj\Release\Entitas.CodeGeneration.Attributes.pdb
+E:\Github\EntityPure\CodeGeneration.Attributes\bin\Release\Entitas.CodeGeneration.Attributes.dll
+E:\Github\EntityPure\CodeGeneration.Attributes\bin\Release\Entitas.CodeGeneration.Attributes.pdb
+E:\Github\EntityPure\CodeGeneration.Attributes\obj\Release\Entitas.CodeGeneration.Attributes.csprojAssemblyReference.cache
+E:\Github\EntityPure\CodeGeneration.Attributes\obj\Release\Entitas.CodeGeneration.Attributes.csproj.CoreCompileInputs.cache
+E:\Github\EntityPure\CodeGeneration.Attributes\obj\Release\Entitas.CodeGeneration.Attributes.dll
+E:\Github\EntityPure\CodeGeneration.Attributes\obj\Release\Entitas.CodeGeneration.Attributes.pdb

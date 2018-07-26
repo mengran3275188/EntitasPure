@@ -1,0 +1,16 @@
+E:\Github\MyEntitas\Bin\Entitas.CodeGenerator.CLI\Entitas.CodeGeneration.CodeGenerator.CLI.exe.config
+E:\Github\MyEntitas\Bin\Entitas.CodeGenerator.CLI\Entitas.CodeGeneration.CodeGenerator.CLI.exe
+E:\Github\MyEntitas\Bin\Entitas.CodeGenerator.CLI\Entitas.CodeGeneration.CodeGenerator.CLI.pdb
+E:\Github\MyEntitas\CodeGenerator.CLI\obj\Release\CodeGenerator.CLI.csprojAssemblyReference.cache
+E:\Github\MyEntitas\CodeGenerator.CLI\obj\Release\CodeGenerator.CLI.csproj.CoreCompileInputs.cache
+E:\Github\MyEntitas\CodeGenerator.CLI\obj\Release\CodeGenerator.CLI.csproj.CopyComplete
+E:\Github\MyEntitas\CodeGenerator.CLI\obj\Release\Entitas.CodeGeneration.CodeGenerator.CLI.exe
+E:\Github\MyEntitas\CodeGenerator.CLI\obj\Release\Entitas.CodeGeneration.CodeGenerator.CLI.pdb
+E:\Github\EntityPure\Bin\Entitas.CodeGenerator.CLI\Entitas.CodeGeneration.CodeGenerator.CLI.exe.config
+E:\Github\EntityPure\Bin\Entitas.CodeGenerator.CLI\Entitas.CodeGeneration.CodeGenerator.CLI.exe
+E:\Github\EntityPure\Bin\Entitas.CodeGenerator.CLI\Entitas.CodeGeneration.CodeGenerator.CLI.pdb
+E:\Github\EntityPure\CodeGenerator.CLI\obj\Release\CodeGenerator.CLI.csprojAssemblyReference.cache
+E:\Github\EntityPure\CodeGenerator.CLI\obj\Release\CodeGenerator.CLI.csproj.CoreCompileInputs.cache
+E:\Github\EntityPure\CodeGenerator.CLI\obj\Release\CodeGenerator.CLI.csproj.CopyComplete
+E:\Github\EntityPure\CodeGenerator.CLI\obj\Release\Entitas.CodeGeneration.CodeGenerator.CLI.exe
+E:\Github\EntityPure\CodeGenerator.CLI\obj\Release\Entitas.CodeGeneration.CodeGenerator.CLI.pdb

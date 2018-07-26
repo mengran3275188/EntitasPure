@@ -1,0 +1,11 @@
+E:\Github\MyEntitas\DesperateDev.Logging\obj\Debug\DesperateDevs.Logging.csproj.CoreCompileInputs.cache
+E:\Github\MyEntitas\DesperateDev.Logging\bin\Debug\DesperateDevs.Logging.dll
+E:\Github\MyEntitas\DesperateDev.Logging\bin\Debug\DesperateDevs.Logging.pdb
+E:\Github\MyEntitas\DesperateDev.Logging\obj\Debug\DesperateDevs.Logging.dll
+E:\Github\MyEntitas\DesperateDev.Logging\obj\Debug\DesperateDevs.Logging.pdb
+E:\Github\EntityPure\DesperateDev.Logging\bin\Debug\DesperateDevs.Logging.dll
+E:\Github\EntityPure\DesperateDev.Logging\bin\Debug\DesperateDevs.Logging.pdb
+E:\Github\EntityPure\DesperateDev.Logging\obj\Debug\DesperateDevs.Logging.csproj.CoreCompileInputs.cache
+E:\Github\EntityPure\DesperateDev.Logging\obj\Debug\DesperateDevs.Logging.dll
+E:\Github\EntityPure\DesperateDev.Logging\obj\Debug\DesperateDevs.Logging.pdb
+E:\Github\EntityPure\DesperateDev.Logging\obj\Debug\DesperateDevs.Logging.csprojAssemblyReference.cache

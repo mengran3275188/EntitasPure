@@ -1,0 +1,11 @@
+E:\Github\MyEntitas\Bin\Entitas.dll
+E:\Github\MyEntitas\Bin\Entitas\Entitas.dll
+E:\Github\MyEntitas\Entitas\obj\Release\Entitas.csprojAssemblyReference.cache
+E:\Github\MyEntitas\Entitas\obj\Release\Entitas.csproj.CoreCompileInputs.cache
+E:\Github\MyEntitas\Entitas\obj\Release\Entitas.csproj.CopyComplete
+E:\Github\MyEntitas\Entitas\obj\Release\Entitas.dll
+E:\Github\EntityPure\Bin\Entitas\Entitas.dll
+E:\Github\EntityPure\Entitas\obj\Release\Entitas.csprojAssemblyReference.cache
+E:\Github\EntityPure\Entitas\obj\Release\Entitas.csproj.CoreCompileInputs.cache
+E:\Github\EntityPure\Entitas\obj\Release\Entitas.csproj.CopyComplete
+E:\Github\EntityPure\Entitas\obj\Release\Entitas.dll
