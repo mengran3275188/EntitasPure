@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractGenerator.cs" />
+    <Compile Include="ContextObserverGenerator.cs" />
+    <Compile Include="FeatureClassGenerator.cs" />
     <Compile Include="PostProcessor\AddFileHeaderPostProcessor.cs" />
     <Compile Include="PostProcessor\CleanTargetDirectoryPostProcessor.cs" />
     <Compile Include="CodeGeneratorExtentions.cs" />

@@ -49,6 +49,7 @@ namespace Entitas.CodeGeneration.Plugins {
             return data.GetEventData()
                 .Select(eventData => new CodeGenFile(
                     contextName + Path.DirectorySeparatorChar +
+                    contextName +
                     "Components" + /*Path.DirectorySeparatorChar +
                     contextName + data.EventListener(contextName, eventData).AddComponentSuffix() +*/ ".cs",
                     TEMPLATE.Replace(data, contextName, eventData),
