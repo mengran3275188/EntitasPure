@@ -42,7 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractConfigurableConfig.cs" />
     <Compile Include="AppDomainExtension.cs" />
     <Compile Include="AssemblyResolver.cs" />
     <Compile Include="AttributeInfo.cs" />
@@ -52,7 +51,6 @@
     <Compile Include="InvalidKeyPropertiesException.cs" />
     <Compile Include="ObjectCache.cs" />
     <Compile Include="ObjectPool.cs" />
-    <Compile Include="Preferences.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="PublicMemberInfo.cs" />
     <Compile Include="PublicMemberInfoExtension.cs" />
